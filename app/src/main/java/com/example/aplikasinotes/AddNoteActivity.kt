@@ -22,7 +22,7 @@ class AddNoteActivity : AppCompatActivity() {
             val note = Note(0, title, content)
             db.insertNote(note)
             finish()
-            Toast.makeText(this, "Note Saved", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Note berhasil dibuat", Toast.LENGTH_SHORT).show()
         }
     }
 }
