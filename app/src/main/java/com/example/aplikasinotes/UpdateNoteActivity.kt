@@ -2,6 +2,7 @@ package com.example.aplikasinotes
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import com.example.aplikasinotes.databinding.ActivityUpdateBinding
 
 class UpdateNoteActivity : AppCompatActivity() {
@@ -17,6 +18,24 @@ class UpdateNoteActivity : AppCompatActivity() {
 
         db = NotesDatabaseHelper(this)
 
-        noteId = intent.getIntExtra("note_id")
+        noteId = intent.getIntExtra("note_id", -1 )
+        if (noteId == -1){
+            finish()
+            return
+        }
+
+        val note = db.getNoteByID(noteId)
+        binding.updateTitleEditText.setText(note.title)
+        binding.updateContentEditText.setText(note.content)
+
+        binding.updateSaveButton.setOnClickListener{
+            val newTitle = binding.updateTitleEditText.text.toString()
+            val newContent = binding.updateContentEditText.text.toString()
+            val updatedNote = Note(noteId, newTitle, newContent)
+            db.updateNote(updatedNote)
+            finish()
+            Toast.makeText(this, "Changes Saved", Toast.LENGTH_SHORT).show()
+        }
+
     }
 }
