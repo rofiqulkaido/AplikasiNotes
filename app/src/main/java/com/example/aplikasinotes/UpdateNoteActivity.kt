@@ -3,17 +3,17 @@ package com.example.aplikasinotes
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import com.example.aplikasinotes.databinding.ActivityUpdateBinding
+import com.example.aplikasinotes.databinding.ActivityUpdateNoteBinding
 
 class UpdateNoteActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityUpdateBinding
+    private lateinit var binding: ActivityUpdateNoteBinding
     private lateinit var db: NotesDatabaseHelper
     private var noteId: Int = -1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityUpdateBinding.inflate(layoutInflater)
+        binding = ActivityUpdateNoteBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         db = NotesDatabaseHelper(this)
