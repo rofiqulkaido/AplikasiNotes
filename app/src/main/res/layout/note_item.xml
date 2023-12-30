@@ -46,15 +46,37 @@
 
         </RelativeLayout>
 
-        <TextView
-            android:id="@+id/contentTextView"
-            android:layout_width="wrap_content"
+
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Description"
-            android:maxLines="3"
-            android:layout_marginTop="4dp"
-            android:fontFamily="@font/poppinsregular"
-            android:textColor="@color/pink"/>
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:id="@+id/contentTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Description"
+                android:maxLines="3"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/poppinsregular"
+                android:textColor="@color/pink"/>
+
+            <TextView
+                android:id="@+id/tanggalTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="22 Agustus 2023"
+                android:maxLines="3"
+                android:layout_marginTop="4dp"
+                android:layout_alignParentEnd="true"
+                android:fontFamily="@font/poppinsregular"
+                android:textColor="@color/pink"/>
+
+
+        </RelativeLayout>
+
 
     </LinearLayout>
 

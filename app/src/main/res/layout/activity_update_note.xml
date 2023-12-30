@@ -30,33 +30,49 @@
         app:srcCompat="@drawable/baseline_done_24" />
 
     <EditText
-        android:id="@+id/updateTitleEditText"
+        android:id="@+id/titleEditText"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:hint="Enter the title"
+        android:hint="Edit title"
         android:padding="12dp"
-        android:textSize="20sp"
+        android:textSize="18sp"
         android:layout_below="@id/editNoteHeading"
         android:background="@drawable/pink_border"
         android:layout_marginTop="16dp"
         android:maxLines="1"
         android:fontFamily="@font/poppinsregular"/>
+
     <EditText
-        android:id="@+id/updateContentEditText"
+        android:id="@+id/tanggalEditText"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/titleEditText"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/pink_border"
+        android:fontFamily="@font/poppinsregular"
+        android:hint="Edit tanggal"
+        android:maxLines="1"
+        android:padding="12dp"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/contentEditText"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:hint="Enter the description"
+        android:hint="Edit deskripsi"
         android:gravity="top"
         android:padding="12dp"
         android:textSize="18sp"
         android:fontFamily="@font/poppinsregular"
         android:background="@drawable/pink_border"
-        android:layout_below="@id/updateTitleEditText"
+        android:layout_below="@id/tanggalEditText"
         android:layout_marginTop="12dp" />
 
 

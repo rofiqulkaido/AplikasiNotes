@@ -17,6 +17,7 @@ class NotesAdapter(private var notes: List<NotesModel>, context: Context) :
 
     class NoteViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val titleTextView: TextView = itemView.findViewById(R.id.titleTextView)
+        val tanggalTextView: TextView = itemView.findViewById(R.id.tanggalTextView)
         val contentTextView: TextView = itemView.findViewById(R.id.contentTextView)
         val updateButton: ImageView = itemView.findViewById(R.id.updateButton)
         val deleteButton: ImageView = itemView.findViewById(R.id.deleteButton)
@@ -32,6 +33,7 @@ class NotesAdapter(private var notes: List<NotesModel>, context: Context) :
     override fun onBindViewHolder(holder: NoteViewHolder, position: Int) {
         val note = notes[position]
         holder.titleTextView.text = note.title
+        holder.tanggalTextView.text = note.tanggal
         holder.contentTextView.text = note.content
 
         holder.updateButton.setOnClickListener{
