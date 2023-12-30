@@ -10,7 +10,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 
-class NotesAdapter(private var notes: List<Note>, context: Context) :
+class NotesAdapter(private var notes: List<NotesModel>, context: Context) :
     RecyclerView.Adapter<NotesAdapter.NoteViewHolder>() {
 
     private val db: NotesDatabaseHelper = NotesDatabaseHelper(context)
@@ -49,7 +49,7 @@ class NotesAdapter(private var notes: List<Note>, context: Context) :
 
     }
 
-    fun refreshData(newNotes: List<Note>){
+    fun refreshData(newNotes: List<NotesModel>){
         notes = newNotes
         notifyDataSetChanged()
     }

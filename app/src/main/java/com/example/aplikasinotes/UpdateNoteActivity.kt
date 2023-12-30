@@ -31,7 +31,7 @@ class UpdateNoteActivity : AppCompatActivity() {
         binding.updateSaveButton.setOnClickListener{
             val newTitle = binding.updateTitleEditText.text.toString()
             val newContent = binding.updateContentEditText.text.toString()
-            val updatedNote = Note(noteId, newTitle, newContent)
+            val updatedNote = NotesModel(noteId, newTitle, newContent)
             db.updateNote(updatedNote)
             finish()
             Toast.makeText(this, "Perubahan berhasil disimpan", Toast.LENGTH_SHORT).show()
